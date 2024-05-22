@@ -8,6 +8,22 @@ public class Zoo {
             animals[i].noise();
             animals[i].eat();
             animals[i].sleep();
+
+            if (animals[i] instanceof CanFly) {
+//                ((CanFly) animals[i]).fly();
+                Zoo.makeFly((CanFly) animals[i]);
+            } else if (animals[i] instanceof CanSwim) {
+//                ((CanSwim) animals[i]).swim();
+                Zoo.makeSwim((CanSwim) animals[i]);
+            }
         }
+    }
+
+    private static void makeFly(CanFly animal) {
+        animal.fly();
+    }
+
+    private static void makeSwim(CanSwim animal) {
+        animal.swim();
     }
 }

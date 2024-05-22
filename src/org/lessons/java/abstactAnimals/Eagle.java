@@ -1,6 +1,6 @@
 package org.lessons.java.abstactAnimals;
 
-public class Eagle extends Animal {
+public class Eagle extends Animal implements CanFly {
 
 
     @Override
@@ -11,5 +11,10 @@ public class Eagle extends Animal {
     @Override
     public void eat() {
         System.out.println("I'm eating fishes");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("I'm flying");
     }
 }
