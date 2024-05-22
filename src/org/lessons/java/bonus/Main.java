@@ -7,10 +7,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String choice;
 
-        System.out.println("What kind of device do you want to create?");
-        choice = scanner.nextLine();
+        Device newDevice = null;
 
-        Device newDevice = Creator.create(choice);
+        while (newDevice == null) {
+            System.out.println("What kind of device do you want to create?");
+            choice = scanner.nextLine();
+            try {
+                newDevice = Creator.create(choice);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
 
         newDevice.play();
         newDevice.stop();
