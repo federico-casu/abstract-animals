@@ -11,10 +11,10 @@ public class Zoo {
 
             if (animals[i] instanceof CanFly) {
 //                ((CanFly) animals[i]).fly();
-                Zoo.makeFly((CanFly) animals[i]);
+                makeFly((CanFly) animals[i]);
             } else if (animals[i] instanceof CanSwim) {
 //                ((CanSwim) animals[i]).swim();
-                Zoo.makeSwim((CanSwim) animals[i]);
+                makeSwim((CanSwim) animals[i]);
             }
         }
     }
