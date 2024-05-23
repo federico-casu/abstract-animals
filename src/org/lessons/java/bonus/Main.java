@@ -14,8 +14,8 @@ public class Main {
             choice = scanner.nextLine();
             try {
                 newDevice = Creator.create(choice);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
+            } catch (IllegalArgumentException luisa) {
+                System.out.println(luisa.getMessage());
             }
         }
 
